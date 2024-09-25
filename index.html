@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Design Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Pro Design Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.6.0/fabric.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.3/firebase-app.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.3/firebase-firestore.min.js"></script>
+</head>
+<body>
+
+    <!-- Toolbar for Text, Shapes, Image, and Actions -->
+    <div class="toolbar">
+        <div class="font-options">
+            <label for="font-family">Font:</label>
+            <select id="font-family">
+                <option value="Arial">Arial</option>
+                <option value="Rajdhani">Rajdhani</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+
+            <label for="font-size">Size:</label>
+            <input type="number" id="font-size" value="56">
+
+            <label for="color-picker">Color:</label>
+            <input type="color" id="color-picker" value="#000000">
+        </div>
+
+        <div class="shape-tools">
+            <button id="add-rectangle">Rectangle</button>
+            <button id="add-circle">Circle</button>
+            <button id="add-line">Line</button>
+            <input type="file" id="image-upload" accept="image/*">
+        </div>
+
+        <div class="actions">
+            <button id="add-text">Add Text</button>
+            <button id="lock-object">Lock</button>
+            <button id="unlock-object">Unlock</button>
+            <button id="group-objects">Group</button>
+            <button id="ungroup-objects">Ungroup</button>
+            <button id="toggle-grid">Toggle Grid</button>
+            <button id="undo">Undo</button>
+            <button id="redo">Redo</button>
+            <button id="delete">Delete</button>
+        </div>
+            <!-- Top Bar for Main Actions and User Management -->
+    <div class="top-bar">
+        <button id="save-cloud">Save to Cloud</button>
+        <button id="load-cloud">Load from Cloud</button>
+        <button id="export-project">Export</button>
+        <button id="invite-collaborators">Invite Collaborators</button>
+        <button id="preview-prototype">Preview Prototype</button>
+        <button id="add-plugin">Add Plugin</button>
+    </div>
+
+    <!-- Toolbar for Tools -->
+    <div class="toolbar">
+        <button id="text-tool">Text Tool</button>
+        <button id="shape-tool">Shapes</button>
+        <button id="image-tool">Upload Image</button>
+        <button id="pen-tool">Pen Tool</button>
+        <button id="responsive-tool">Responsive Design</button>
+        <button id="interactive-tool">Interactive Components</button>
+        <button id="animate-tool">Animations</button>
+    </div>
+
+    <!-- Left Panel for Layers, Components, and Assets -->
+    <div class="left-panel">
+        <h3>Layers</h3>
+        <ul id="layer-list"></ul>
+
+        <h3>Components</h3>
+        <ul id="component-list"></ul>
+
+        <h3>Assets</h3>
+        <input type="file" id="image-upload" accept="image/*">
+        <button id="add-asset">Add Asset</button>
+    </div>
+
+    <!-- Main Canvas Area -->
+    <div class="canvas-container">
+        <canvas id="canvas" width="1000" height="800"></canvas>
+    </div>
+
+    <!-- Right Panel for Properties and Settings -->
+    <div class="right-panel">
+        <h3>Properties</h3>
+        <label for="font-size">Font Size</label>
+        <input type="number" id="font-size" value="16">
+
+        <label for="color-picker">Color</label>
+        <input type="color" id="color-picker" value="#000000">
+
+        <h3>Animation Settings</h3>
+        <label for="animation-type">Animation Type</label>
+        <select id="animation-type">
+            <option value="none">None</option>
+            <option value="fade-in">Fade In</option>
+            <option value="slide">Slide</option>
+        </select>
+    </div>
+
+    <!-- Prototyping Interaction Settings (for Links and States) -->
+    <div class="prototype-settings">
+        <h3>Interactive Components</h3>
+        <button id="add-interaction">Add Interaction</button>
+        <button id="view-states">View States</button>
+    </div>
+
+    <script src="script.js"></script>
+    </div>
+
+    <!-- Canvas for Design -->
+    <canvas id="canvas" width="800" height="600"></canvas>
+
+    <!-- Background Color Change -->
+    <div class="background-options">
+        <label for="bg-color">Canvas Background:</label>
+        <input type="color" id="bg-color" value="#ffffff">
+    </div>
+
+    <!-- Save & Load Buttons -->
+    <div class="actions">
+        <button id="save">Save Progress</button>
+        <button id="load">Load Progress</button>
+        <button id="download">Download as PNG</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.6.0/fabric.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
