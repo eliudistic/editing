@@ -6,6 +6,7 @@
     <title>Advanced Design Tool</title>
     <link rel="stylesheet" href="styles.css">
     <title>Pro Design Tool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.6.0/fabric.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.3/firebase-app.min.js"></script>
@@ -13,60 +14,25 @@
 </head>
 <body>
 
-    <!-- Toolbar for Text, Shapes, Image, and Actions -->
-    <div class="toolbar">
-        <div class="font-options">
-            <label for="font-family">Font:</label>
-            <select id="font-family">
-                <option value="Arial">Arial</option>
-                <option value="Rajdhani">Rajdhani</option>
-                <option value="Verdana">Verdana</option>
-            </select>
-
-            <label for="font-size">Size:</label>
-            <input type="number" id="font-size" value="56">
-
-            <label for="color-picker">Color:</label>
-            <input type="color" id="color-picker" value="#000000">
-        </div>
-
-        <div class="shape-tools">
-            <button id="add-rectangle">Rectangle</button>
-            <button id="add-circle">Circle</button>
-            <button id="add-line">Line</button>
-            <input type="file" id="image-upload" accept="image/*">
-        </div>
-
-        <div class="actions">
-            <button id="add-text">Add Text</button>
-            <button id="lock-object">Lock</button>
-            <button id="unlock-object">Unlock</button>
-            <button id="group-objects">Group</button>
-            <button id="ungroup-objects">Ungroup</button>
-            <button id="toggle-grid">Toggle Grid</button>
-            <button id="undo">Undo</button>
-            <button id="redo">Redo</button>
-            <button id="delete">Delete</button>
-        </div>
-            <!-- Top Bar for Main Actions and User Management -->
+    <!-- Top Bar for Main Actions -->
     <div class="top-bar">
-        <button id="save-cloud">Save to Cloud</button>
-        <button id="load-cloud">Load from Cloud</button>
-        <button id="export-project">Export</button>
-        <button id="invite-collaborators">Invite Collaborators</button>
-        <button id="preview-prototype">Preview Prototype</button>
-        <button id="add-plugin">Add Plugin</button>
+        <span class="icon-action" id="save-cloud"><i class="fas fa-save"></i> Save</span>
+        <span class="icon-action" id="load-cloud"><i class="fas fa-cloud-download-alt"></i> Load</span>
+        <span class="icon-action" id="export-project"><i class="fas fa-file-export"></i> Export</span>
+        <span class="icon-action" id="invite-collaborators"><i class="fas fa-user-plus"></i> Invite</span>
+        <span class="icon-action" id="preview-prototype"><i class="fas fa-eye"></i> Preview</span>
+        <span class="icon-action" id="add-plugin"><i class="fas fa-plug"></i> Plugins</span>
     </div>
 
-    <!-- Toolbar for Tools -->
+    <!-- Toolbar for Tools (Left-hand Sidebar) -->
     <div class="toolbar">
-        <button id="text-tool">Text Tool</button>
-        <button id="shape-tool">Shapes</button>
-        <button id="image-tool">Upload Image</button>
-        <button id="pen-tool">Pen Tool</button>
-        <button id="responsive-tool">Responsive Design</button>
-        <button id="interactive-tool">Interactive Components</button>
-        <button id="animate-tool">Animations</button>
+        <span class="icon-action" id="text-tool"><i class="fas fa-font"></i> Text</span>
+        <span class="icon-action" id="shape-tool"><i class="fas fa-square"></i> Shapes</span>
+        <span class="icon-action" id="image-tool"><i class="fas fa-upload"></i> Image</span>
+        <span class="icon-action" id="pen-tool"><i class="fas fa-pen"></i> Pen</span>
+        <span class="icon-action" id="responsive-tool"><i class="fas fa-tablet-alt"></i> Responsive</span>
+        <span class="icon-action" id="interactive-tool"><i class="fas fa-cogs"></i> Interactive</span>
+        <span class="icon-action" id="animate-tool"><i class="fas fa-film"></i> Animation</span>
     </div>
 
     <!-- Left Panel for Layers, Components, and Assets -->
@@ -104,7 +70,6 @@
             <option value="slide">Slide</option>
         </select>
     </div>
-
     <!-- Prototyping Interaction Settings (for Links and States) -->
     <div class="prototype-settings">
         <h3>Interactive Components</h3>
